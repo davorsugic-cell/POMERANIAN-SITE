@@ -114,7 +114,7 @@ async function initData(){
         sb.auth.getSession()]);
       if (a.error) throw a.error; if (b.error) throw b.error;
       pups = a.data; gallery = b.data.length ? b.data : DEMO_GAL.map(g => ({...g, staticna: true})); session = s.data.session;
-    } catch (e) { console.error('Supabase greška', e); pups = []; gallery = []; }
+    } catch (e) { console.error('Supabase greška', e); pups = []; gallery = DEMO_GAL.map(g => ({...g, staticna: true})); }
   } else {
     pups = DEMO_PUPS.slice(); gallery = DEMO_GAL.slice();
     $('pdemo').hidden = false;
