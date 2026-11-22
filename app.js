@@ -330,7 +330,7 @@ document.querySelector('#madmin .mbox').addEventListener('click', async e => {
   renderAdmin(); isP ? renderPups() : renderGal(); });
 
 /* ---------- start ---------- */
-try { const s = localStorage.getItem('pt-lang'); if (s === 'bs' || s === 'en') L = s; else if (!/^(bs|sr|hr|sh)/i.test(navigator.language || '')) L = 'en'; } catch (e) {}
+try { const s = localStorage.getItem('pt-lang'); if (s === 'bs' || s === 'en') L = s; else if (!(navigator.languages || [navigator.language || '']).some(l => /^(bs|sr|hr|sh|en-ba|en-rs|en-hr)/i.test(l))) L = 'en'; } catch (e) {}
 $('l-bs').onclick = () => setLang('bs'); $('l-en').onclick = () => setLang('en');
 renderStatic(); renderPups(); renderGal(); initData();
 $('yr').textContent = new Date().getFullYear();
