@@ -2,7 +2,7 @@
 const CFG = window.PT_CONFIG || {};
 const LIVE = !!(CFG.SUPABASE_URL && CFG.SUPABASE_ANON_KEY);
 const BUCKET = 'slike';
-const WA = '387644163183';
+const WA = '38766229923';
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -48,7 +48,7 @@ gk:"Galerija",gh:"Naši <em>mali medvjedići</em>",kat:{stenci:"Štenci",odrasli
 qk:"Pitanja",qh:"Često <em>pitate</em>",
 faq:[["Da li šaljete štence u inostranstvo?","Da. Naši psi žive u više od 100 zemalja, a dostavu i papire organizujemo za vas."],["Kakve dokumente štene dobija?","Svako štene dolazi sa FCI dokumentima. Za detalje o vašoj zemlji pišite nam."],["Kako rezervisati štene?","Kod šteneta koje vam se sviđa kliknite „Pitajte za ovo štene“ ili nam pošaljite upit, pa dogovaramo detalje."],["Da li radite grooming i za druge rase?","Da. Kroz ATK Company radimo grooming, čuvanje, hotel i prevoz i za druge pse."],["Organizujete li seminare groominga?","Da, Darija vodi seminare groominga pomeranaca. Javite nam se za naredni termin."]],
 ck:"Kontakt",ch:"Javite nam <em>se</em>",cp:"Za štence, grooming, seminare ili čuvanje pišite nam ili pozovite. Odgovaramo na našem i na engleskom jeziku.",
-c1:"Telefon",c2:"Štenci",c3:"Usluge",c4:"Lokacija",f1:"Ime i prezime",f2:"Država",f3:"Zanima me",f4:"Poruka",f5:"Pošalji na WhatsApp",
+c1:"Telefon",wab:"WhatsApp poruka ili poziv",callb:"Pozovite",waf:"Pišite nam",c2:"Štenci",c3:"Usluge",c4:"Lokacija",f1:"Ime i prezime",f2:"Država",f3:"Zanima me",f4:"Poruka",f5:"Pošalji na WhatsApp",
 ft:'Podržavamo <a href="https://humanostspaja.ba" target="_blank" rel="noopener">Udruženje Humanost spaja</a>',
 opt0:"Štene pomeranca",opt9:"Nešto drugo",
 err:"Upišite ime da bismo znali kome odgovaramo.",ok:"Otvaramo WhatsApp sa vašom porukom…",hi:"Zdravo, ja sam",from:"iz",int:"Zanima me",pupmsg:n=>`Zdravo, zanima me štene ${n}. Da li je još dostupno?`},
@@ -80,7 +80,7 @@ gk:"Gallery",gh:"Our <em>little teddy bears</em>",kat:{stenci:"Puppies",odrasli:
 qk:"FAQ",qh:"You often <em>ask</em>",
 faq:[["Do you ship puppies abroad?","Yes. Our dogs live in more than 100 countries, and we arrange delivery and paperwork for you."],["What papers does a puppy come with?","Every puppy comes with FCI papers. Write to us for details about your country."],["How do I reserve a puppy?","Click “Ask about this puppy” on the one you like, or send us an inquiry, and we'll arrange the details."],["Do you groom other breeds?","Yes. Through ATK Company we offer grooming, sitting, a dog hotel and transport for other dogs too."],["Do you run grooming seminars?","Yes, Darija leads Pomeranian grooming seminars. Contact us for the next date."]],
 ck:"Contact",ch:"Get in <em>touch</em>",cp:"For puppies, grooming, seminars or sitting, write or call us. We reply in Bosnian, Serbian, Croatian and English.",
-c1:"Phone",c2:"Puppies",c3:"Services",c4:"Location",f1:"Full name",f2:"Country",f3:"I'm interested in",f4:"Message",f5:"Send via WhatsApp",
+c1:"Phone",wab:"WhatsApp message or call",callb:"Call us",waf:"Message us",c2:"Puppies",c3:"Services",c4:"Location",f1:"Full name",f2:"Country",f3:"I'm interested in",f4:"Message",f5:"Send via WhatsApp",
 ft:'We support <a href="https://humanostspaja.ba" target="_blank" rel="noopener">Humanost spaja association</a>',
 opt0:"Pomeranian puppy",opt9:"Something else",
 err:"Please enter your name so we know who to reply to.",ok:"Opening WhatsApp with your message…",hi:"Hi, I'm",from:"from",int:"I'm interested in",pupmsg:n=>`Hi, I'm interested in the puppy ${n}. Is it still available?`}

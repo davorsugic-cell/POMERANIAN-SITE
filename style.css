@@ -204,3 +204,12 @@ footer a{color:#e2bf72}
 .prev{display:flex;gap:8px;flex-wrap:wrap}.prev img{width:64px;height:64px;object-fit:cover;border-radius:10px}
 @media(max-width:860px){.srow{grid-template-columns:minmax(0,1fr)}.srow:nth-child(even) .sph{order:0}.fcount{margin-left:0;width:100%}}
 @media(max-width:600px){.aform .row3{grid-template-columns:minmax(0,1fr)}}
+
+/* whatsapp */
+.btn.wa{background:#25d366;border-color:#25d366;color:#06240f}
+.btn.wa:hover{filter:brightness(1.08)}
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:8px;height:56px;padding:0 20px 0 16px;border-radius:99px;background:#25d366;color:#06240f;font:700 15px Manrope,sans-serif;text-decoration:none;box-shadow:0 12px 30px -8px rgba(0,0,0,.6)}
+.wa-float svg{width:26px;height:26px}
+.wa-float:hover{filter:brightness(1.08)}
+.wa-float:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+@media(max-width:600px){.wa-float{width:56px;padding:0;justify-content:center}.wa-float span{display:none}}
