@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pomeranian Toys</title>
+<meta name="description" content="Pomeranian Toys by Darija Paspalj – uzgoj pomeranaca sa FCI dokumentima, grooming i edukacija. ATK Company, Banja Luka. Dostava širom svijeta.">
+<link rel="icon" href="img/logo-kruna.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top"><img src="img/logo-kruna.png" alt=""><span>Pomeranian <i>Toys</i></span></a>
+  <div class="links">
+    <a href="#darija" data-i="n1">Darija</a><a href="#usluge" data-i="n2">Usluge</a><a href="#legla" data-i="n3">Štenci</a><a href="#galerija" data-i="n4">Galerija</a><a href="#pitanja" data-i="n5">Pitanja</a>
+  </div>
+  <div class="lang" role="group" aria-label="Jezik / Language"><button id="l-bs" aria-pressed="true">BS</button><button id="l-en" aria-pressed="false">EN</button></div>
+  <a class="btn solid" href="#kontakt" data-i="n6">Kontakt</a>
+</div></nav>
+
+<header class="hero band" id="top"><div class="wrap">
+  <div>
+    <span class="badge"><img src="img/pom-osmijeh.jpg" alt=""><span>Pomeranian specialist · FCI</span></span>
+    <h1 data-i="h1">Pomeranci odgajani <em>s ljubavlju</em>, u porodici</h1>
+    <p data-i="hp">Više od 15 godina Darija Paspalj uzgaja, njeguje i školuje pomerance. Naši psi danas žive u više od 100 zemalja svijeta.</p>
+    <div class="btns"><a class="btn solid" href="#legla" data-i="b1">Najnovija legla</a><a class="btn ghost" href="#usluge" data-i="b2">Grooming i usluge</a></div>
+  </div>
+  <div class="hero-img">
+    <img src="img/pom-cvijece.jpg" alt="Pomeranac sa bijelim cvijećem" fetchpriority="high">
+    <div class="sig"><img src="img/logo-darija-gold.png" alt=""><div><b>Darija Paspalj</b><small data-i="hs">uzgajivač, groomer i edukator</small></div></div>
+  </div>
+</div></header>
+
+<section class="stats band" style="padding-block:38px"><div class="wrap">
+  <div class="stat rv"><b>15+</b><span data-i="s1">godina iskustva</span></div>
+  <div class="stat rv"><b>100+</b><span data-i="s2">zemalja svijeta</span></div>
+  <div class="stat rv"><b>FCI</b><span data-i="s3">dokumenti za štence</span></div>
+  <div class="stat rv"><b>149k</b><span data-i="s4">pratilaca na Instagramu</span></div>
+</div></section>
+
+<section class="about band" id="darija"><div class="wrap">
+  <div class="about-img rv"><img src="img/darija.jpg" alt="Darija Paspalj sa pomerancem"><img class="mark" src="img/logo-darija-gold.png" alt=""></div>
+  <div class="rv">
+    <span class="kick" data-i="ak">Upoznajte uzgajivača</span>
+    <h2 data-i="ah">Pomeranci su dio <em>naše porodice</em></h2>
+    <p class="lead" data-i="ap"></p>
+    <ul class="ticks" id="ticks"></ul>
+    <a class="btn ghost" href="https://www.instagram.com/pomeraniantoys_official/" target="_blank" rel="noopener" data-i="ab">Pratite nas na Instagramu</a>
+  </div>
+</div></section>
+
+<section class="phil band"><div class="wrap">
+  <span class="kick" data-i="fk">Naša filozofija</span>
+  <h2 data-i="fh">Zdravlje, karakter i <em>ljepota</em></h2>
+  <div class="pillars" id="pillars"></div>
+</div></section>
+
+<section class="band" id="usluge"><div class="wrap">
+  <span class="kick">ATK Company · Banja Luka</span>
+  <h2 data-i="uh">Sve za vašeg <em>ljubimca</em></h2>
+  <p class="lead" data-i="up"></p>
+  <div class="svc-list" id="svc"></div>
+</div></section>
+
+<section class="pup band" id="stenci"><div class="wrap">
+  <img class="rv" src="img/pom-portret.jpg" alt="Portret pomeranca" loading="lazy">
+  <div class="rv">
+    <span class="kick" data-i="pk">Štenci</span>
+    <h2 data-i="ph">Kako do vašeg <em>šteneta</em></h2>
+    <p class="lead" data-i="pp"></p>
+    <ol class="steps" id="steps"></ol>
+    <div class="btns"><a class="btn solid" href="#legla" data-i="pb">Pogledajte štence</a><a class="btn ghost" href="#kontakt" data-i="pb2">Pošaljite upit</a></div>
+  </div>
+</div></section>
+
+<section class="band" id="legla"><div class="wrap">
+  <span class="kick" data-i="lk">Najnovija legla</span>
+  <h2 data-i="lh">Štenci koji traže <em>dom</em></h2>
+  <div class="filters" id="pf">
+    <div class="fgroup" data-f="status"></div>
+    <div class="fgroup" data-f="pol"></div>
+    <div class="fgroup"><span data-i="fboja">Boja</span><select class="fsel" id="fboja"></select></div>
+    <span class="fcount" id="pcount"></span>
+  </div>
+  <div class="pups" id="pups"></div>
+  <p class="demo-note" id="pdemo" hidden data-i="demo"></p>
+</div></section>
+
+<section class="phil band" id="galerija"><div class="wrap">
+  <span class="kick" data-i="gk">Galerija</span>
+  <h2 data-i="gh">Naši <em>mali medvjedići</em></h2>
+  <div class="filters"><div class="fgroup" id="gf"></div></div>
+  <div class="gl" id="gl"></div>
+</div></section>
+
+<section class="faq band" id="pitanja"><div class="wrap">
+  <div><span class="kick" data-i="qk">Pitanja</span><h2 data-i="qh">Često <em>pitate</em></h2></div>
+  <div id="faq"></div>
+</div></section>
+
+<section class="contact band" id="kontakt"><div class="wrap">
+  <div>
+    <span class="kick" data-i="ck">Kontakt</span>
+    <h2 data-i="ch">Javite nam <em>se</em></h2>
+    <p class="lead" data-i="cp"></p>
+    <ul class="cl">
+      <li><small data-i="c1">Telefon</small><a href="tel:+387644163183">+387 64 416 3183</a></li>
+      <li><small>WhatsApp</small><a href="https://wa.me/387644163183" target="_blank" rel="noopener">+387 64 416 3183</a></li>
+      <li><small data-i="c2">Štenci</small><a href="mailto:pomeraniantoys@gmail.com">pomeraniantoys@gmail.com</a></li>
+      <li><small data-i="c3">Usluge</small><a href="mailto:atkcompany26@gmail.com">atkcompany26@gmail.com</a></li>
+      <li><small>Instagram</small><a href="https://www.instagram.com/pomeraniantoys_official/" target="_blank" rel="noopener">@pomeraniantoys_official</a></li>
+      <li><small data-i="c4">Lokacija</small><span>Banja Luka 78000, BiH</span></li>
+    </ul>
+  </div>
+  <form id="f" novalidate>
+    <div class="row2">
+      <label><span data-i="f1">Ime i prezime</span><input id="fn" autocomplete="name"></label>
+      <label><span data-i="f2">Država</span><input id="fc" autocomplete="country-name"></label>
+    </div>
+    <label><span data-i="f3">Zanima me</span><select id="ft"></select></label>
+    <label><span data-i="f4">Poruka</span><textarea id="fm"></textarea></label>
+    <button class="btn solid" type="submit" data-i="f5">Pošalji na WhatsApp</button>
+    <p class="fmsg" id="fmsg" aria-live="polite"></p>
+  </form>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="flogos"><img src="img/logo-kruna.png" alt="Pomeranian Toys"><img src="img/logo-atk-gold.png" alt="ATK Company"></div>
+  <span>© <span id="yr"></span> Pomeranian Toys by Darija Paspalj · ATK Company, Banja Luka</span>
+  <span data-i="ft"></span>
+  <a class="adm-link" href="#admin">Admin</a>
+</div></footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Slika">
+  <button class="x" id="lbx" aria-label="Zatvori">×</button><button class="pv" id="lbp" aria-label="Prethodna">‹</button><button class="nx" id="lbn" aria-label="Sljedeća">›</button>
+  <img id="lbi" alt=""><div class="cap" id="lbc"></div>
+</div>
+
+<!-- admin login -->
+<div class="modal" id="mlogin" role="dialog" aria-modal="true" aria-labelledby="mlh">
+  <form class="mbox sm" id="loginf">
+    <button type="button" class="mclose" data-close aria-label="Zatvori">×</button>
+    <h2 id="mlh">Admin</h2>
+    <p class="lead" style="font-size:15px;margin:0 0 16px">Unesite admin šifru za upravljanje štencima i galerijom.</p>
+    <label>Šifra<input type="password" id="lpw" autocomplete="current-password"></label>
+    <button class="btn solid" type="submit" style="margin-top:14px;width:100%">Prijava</button>
+    <p class="amsg" id="lmsg" aria-live="polite"></p>
+  </form>
+</div>
+
+<!-- admin panel -->
+<div class="modal" id="madmin" role="dialog" aria-modal="true" aria-labelledby="mah">
+  <div class="mbox">
+    <button type="button" class="mclose" data-close aria-label="Zatvori">×</button>
+    <div class="abar"><h2 id="mah">Admin panel</h2><button class="btn ghost" id="logout" style="min-height:40px">Odjava</button></div>
+    <p class="amsg" id="ademo" hidden>Demo način: Supabase još nije povezan, promjene se ne čuvaju nakon osvježavanja stranice.</p>
+    <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-tab="tp">Štenci</button><button role="tab" aria-selected="false" data-tab="tg">Galerija</button></div>
+
+    <div id="tp">
+      <form class="aform" id="pform">
+        <strong>Novo štene</strong>
+        <div class="row2"><label>Ime<input id="p-ime" placeholder="npr. Leo" required></label><label>Fotografija<input type="file" id="p-img" accept="image/*" required></label></div>
+        <div class="row3">
+          <label>Pol<select id="p-pol"><option value="m">Muško</option><option value="z">Žensko</option></select></label>
+          <label>Boja<select id="p-boja"></select></label>
+          <label>Status<select id="p-status"><option value="dostupno">Dostupno</option><option value="rezervisano">Rezervisano</option><option value="prodato">Prodato</option></select></label>
+        </div>
+        <div class="row2"><label>Datum rođenja<input type="date" id="p-rodjen"></label><label>Kratak opis<input id="p-opis" placeholder="npr. Mirna, voli maženje"></label></div>
+        <button class="btn solid" type="submit">Dodaj štene</button>
+        <p class="amsg" id="pmsg" aria-live="polite"></p>
+      </form>
+      <div class="alist" id="plist"></div>
+    </div>
+
+    <div id="tg" hidden>
+      <form class="aform" id="gform">
+        <strong>Nove slike u galeriju</strong>
+        <div class="row2"><label>Slike (može više odjednom)<input type="file" id="g-img" accept="image/*" multiple required></label><label>Kategorija<select id="g-kat"></select></label></div>
+        <label>Opis (nije obavezno)<input id="g-opis" placeholder="npr. Nakon groominga"></label>
+        <div class="prev" id="gprev"></div>
+        <button class="btn solid" type="submit">Dodaj u galeriju</button>
+        <p class="amsg" id="gmsg" aria-live="polite"></p>
+      </form>
+      <div class="alist" id="glist"></div>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+Ovdje ubaci slike usluga (JPG, najbolje 1600x1200, ležeće):
+grooming.jpg, seminari.jpg, hotel.jpg, cuvanje.jpg, prevoz.jpg, ozon.jpg
+Čim fajl postoji, pojavi se na sajtu umjesto praznog okvira.
