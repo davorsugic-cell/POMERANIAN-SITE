@@ -94,11 +94,12 @@ const DEMO_PUPS = [
   {id:'d3',ime:'Max',pol:'m',boja:'narandzasta',status:'dostupno',rodjen:'2026-08-30',opis:'Gusta dlaka, malena njuškica.',slika_url:'img/pom-portret.jpg'},
   {id:'d4',ime:'Luna',pol:'z',boja:'narandzasta',status:'prodato',rodjen:'2026-07-02',opis:'',slika_url:'img/pom-cvijece.jpg'}];
 const DEMO_GAL = [
+  {id:'g5',kategorija:'ostalo',opis:'Darija Paspalj',slika_url:'img/darija.jpg'},
   {id:'g1',kategorija:'odrasli',opis:'',slika_url:'img/pom-cvijece.jpg'},
   {id:'g2',kategorija:'stenci',opis:'',slika_url:'img/pom-parket.jpg'},
   {id:'g3',kategorija:'odrasli',opis:'',slika_url:'img/pom-portret.jpg'},
   {id:'g4',kategorija:'grooming',opis:'Nakon groominga',slika_url:'img/pom-osmijeh.jpg'},
-  {id:'g5',kategorija:'ostalo',opis:'Darija Paspalj',slika_url:'img/darija.jpg'}];
+];
 
 const loadScript = src => new Promise((res, rej) => { const s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = rej; document.head.appendChild(s); });
 
