@@ -48,10 +48,10 @@ gk:"Galerija",gh:"Naši <em>mali medvjedići</em>",kat:{stenci:"Štenci",odrasli
 qk:"Pitanja",qh:"Često <em>pitate</em>",
 faq:[["Da li šaljete štence u inostranstvo?","Da. Naši psi žive u više od 100 zemalja, a dostavu i papire organizujemo za vas."],["Kakve dokumente štene dobija?","Svako štene dolazi sa FCI dokumentima. Za detalje o vašoj zemlji pišite nam."],["Kako rezervisati štene?","Kod šteneta koje vam se sviđa kliknite „Pitajte za ovo štene“ ili nam pošaljite upit, pa dogovaramo detalje."],["Da li radite grooming i za druge rase?","Da. Kroz ATK Company radimo grooming, čuvanje, hotel i prevoz i za druge pse."],["Organizujete li seminare groominga?","Da, Darija vodi seminare groominga pomeranaca. Javite nam se za naredni termin."]],
 ck:"Kontakt",ch:"Javite nam <em>se</em>",cp:"Za štence, grooming, seminare ili čuvanje pišite nam ili pozovite. Odgovaramo na našem i na engleskom jeziku.",
-c1:"Telefon",wab:"WhatsApp poruka ili poziv",callb:"Pozovite",waf:"Pišite nam",c2:"Štenci",c3:"Usluge",c4:"Lokacija",f1:"Ime i prezime",f2:"Država",f3:"Zanima me",f4:"Poruka",f5:"Pošalji na WhatsApp",
+c1:"Telefon",wab:"WhatsApp poruka ili poziv",callb:"Pozovite",waf:"Pišite nam",c4:"Lokacija",f1:"Ime i prezime",f2:"Država",f3:"Zanima me",f4:"Poruka",f5:"Pošalji upit",f6:"Telefon (nije obavezno)",
 ft:'Podržavamo <a href="https://humanostspaja.ba" target="_blank" rel="noopener">Udruženje Humanost spaja</a>',
 opt0:"Štene pomeranca",opt9:"Nešto drugo",
-err:"Upišite ime da bismo znali kome odgovaramo.",ok:"Otvaramo WhatsApp sa vašom porukom…",hi:"Zdravo, ja sam",from:"iz",int:"Zanima me",pupmsg:n=>`Zdravo, zanima me štene ${n}. Da li je još dostupno?`},
+err:"Upišite ime, ispravan email i poruku.",ok:"Hvala! Upit je poslan, javićemo vam se uskoro.",sending:"Šaljem…",fail:"Slanje nije uspjelo. Pišite nam na WhatsApp ili na pomeraniantoys@gmail.com.",hi:"Zdravo, ja sam",from:"iz",int:"Zanima me",pupmsg:n=>`Zdravo, zanima me štene ${n}. Da li je još dostupno?`},
 en:{n1:"Home",n2:"Services",n3:"Puppies",n4:"Gallery",n5:"FAQ",n6:"Contact",
 h1:"Pomeranians raised <em>with love</em>, in a family",hp:"For more than 15 years Darija Paspalj has bred, groomed and taught about Pomeranians. Our dogs now live in more than 100 countries.",
 b1:"Latest litters",b2:"Grooming & services",hs:"breeder, groomer and educator",s1:"years of experience",s2:"countries worldwide",s3:"papers for puppies",s4:"followers on Instagram",
@@ -80,10 +80,10 @@ gk:"Gallery",gh:"Our <em>little teddy bears</em>",kat:{stenci:"Puppies",odrasli:
 qk:"FAQ",qh:"You often <em>ask</em>",
 faq:[["Do you ship puppies abroad?","Yes. Our dogs live in more than 100 countries, and we arrange delivery and paperwork for you."],["What papers does a puppy come with?","Every puppy comes with FCI papers. Write to us for details about your country."],["How do I reserve a puppy?","Click “Ask about this puppy” on the one you like, or send us an inquiry, and we'll arrange the details."],["Do you groom other breeds?","Yes. Through ATK Company we offer grooming, sitting, a dog hotel and transport for other dogs too."],["Do you run grooming seminars?","Yes, Darija leads Pomeranian grooming seminars. Contact us for the next date."]],
 ck:"Contact",ch:"Get in <em>touch</em>",cp:"For puppies, grooming, seminars or sitting, write or call us. We reply in Bosnian, Serbian, Croatian and English.",
-c1:"Phone",wab:"WhatsApp message or call",callb:"Call us",waf:"Message us",c2:"Puppies",c3:"Services",c4:"Location",f1:"Full name",f2:"Country",f3:"I'm interested in",f4:"Message",f5:"Send via WhatsApp",
+c1:"Phone",wab:"WhatsApp message or call",callb:"Call us",waf:"Message us",c4:"Location",f1:"Full name",f2:"Country",f3:"I'm interested in",f4:"Message",f5:"Send inquiry",f6:"Phone (optional)",
 ft:'We support <a href="https://humanostspaja.ba" target="_blank" rel="noopener">Humanost spaja association</a>',
 opt0:"Pomeranian puppy",opt9:"Something else",
-err:"Please enter your name so we know who to reply to.",ok:"Opening WhatsApp with your message…",hi:"Hi, I'm",from:"from",int:"I'm interested in",pupmsg:n=>`Hi, I'm interested in the puppy ${n}. Is it still available?`}
+err:"Please enter your name, a valid email and a message.",ok:"Thank you! Your inquiry has been sent, we will reply soon.",sending:"Sending…",fail:"Sending failed. Message us on WhatsApp or at pomeraniantoys@gmail.com.",hi:"Hi, I'm",from:"from",int:"I'm interested in",pupmsg:n=>`Hi, I'm interested in the puppy ${n}. Is it still available?`}
 };
 
 /* ---------- podaci ---------- */
@@ -210,10 +210,22 @@ $('gl').addEventListener('click', e => { const el = e.target.closest('[data-lbg]
 
 /* ---------- kontakt ---------- */
 $('svc').addEventListener('click', e => { const b = e.target.closest('[data-book]'); if (b) $('ft').selectedIndex = +b.dataset.book; });
-$('f').addEventListener('submit', ev => { ev.preventDefault(); const d = t(), m = $('fmsg'), n = $('fn').value.trim(), c = $('fc').value.trim(), msg = $('fm').value.trim();
-  if (!n) { m.textContent = d.err; $('fn').focus(); return; }
-  const text = `${d.hi} ${n}${c ? ' ' + d.from + ' ' + c : ''}. ${d.int}: ${$('ft').value}.${msg ? '\n\n' + msg : ''}`;
-  m.textContent = d.ok; const a = document.createElement('a'); a.href = `https://wa.me/${WA}?text=${encodeURIComponent(text)}`; a.target = '_blank'; a.rel = 'noopener'; document.body.appendChild(a); a.click(); a.remove(); });
+const MAIL = 'pomeraniantoys@gmail.com';
+$('f').addEventListener('submit', async ev => { ev.preventDefault();
+  const d = t(), m = $('fmsg'), btn = ev.submitter;
+  const n = $('fn').value.trim(), em = $('fe').value.trim(), msg = $('fm').value.trim();
+  if ($('fh').value) return;
+  if (!n || !$('fe').checkValidity() || !em || !msg) { m.textContent = d.err; m.style.color = '#e08a7a'; return; }
+  m.style.color = ''; m.textContent = d.sending; btn.disabled = true;
+  try {
+    const r = await fetch(`https://formsubmit.co/ajax/${MAIL}`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({ _subject: `Upit sa sajta: ${$('ft').value} – ${n}`, _replyto: em, _template: 'table', _captcha: 'false',
+        Ime: n, Email: em, Telefon: $('fp').value.trim() || '-', Drzava: $('fc').value.trim() || '-', Zanima: $('ft').value, Poruka: msg, Jezik: L.toUpperCase() }) });
+    const res = await r.json().catch(() => ({}));
+    if (!r.ok || String(res.success) === 'false') throw new Error(res.message || r.status);
+    m.textContent = d.ok; ev.target.reset();
+  } catch (e) { console.error(e); m.textContent = d.fail; m.style.color = '#e08a7a'; }
+  btn.disabled = false; });
 
 /* ---------- admin ---------- */
 const BS = T.bs;

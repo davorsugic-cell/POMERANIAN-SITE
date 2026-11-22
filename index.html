@@ -110,8 +110,7 @@
     <ul class="cl">
       <li><small data-i="c1">Telefon</small><a href="tel:+38766229923">+387 66 229 923</a></li>
       <li><small>WhatsApp</small><a href="https://wa.me/38766229923" target="_blank" rel="noopener">+387 66 229 923</a></li>
-      <li><small data-i="c2">Štenci</small><a href="mailto:pomeraniantoys@gmail.com">pomeraniantoys@gmail.com</a></li>
-      <li><small data-i="c3">Usluge</small><a href="mailto:atkcompany26@gmail.com">atkcompany26@gmail.com</a></li>
+      <li><small>Email</small><a href="mailto:pomeraniantoys@gmail.com">pomeraniantoys@gmail.com</a></li>
       <li><small>Instagram</small><a href="https://www.instagram.com/pomeraniantoys_official/" target="_blank" rel="noopener">@pomeraniantoys_official</a></li>
       <li><small data-i="c4">Lokacija</small><span>Banja Luka 78000, BiH</span></li>
     </ul>
@@ -122,12 +121,17 @@
   </div>
   <form id="f" novalidate>
     <div class="row2">
-      <label><span data-i="f1">Ime i prezime</span><input id="fn" autocomplete="name"></label>
+      <label><span data-i="f1">Ime i prezime</span><input id="fn" autocomplete="name" required></label>
       <label><span data-i="f2">Država</span><input id="fc" autocomplete="country-name"></label>
     </div>
+    <div class="row2">
+      <label><span>Email</span><input id="fe" type="email" autocomplete="email" required></label>
+      <label><span data-i="f6">Telefon (nije obavezno)</span><input id="fp" type="tel" autocomplete="tel"></label>
+    </div>
     <label><span data-i="f3">Zanima me</span><select id="ft"></select></label>
-    <label><span data-i="f4">Poruka</span><textarea id="fm"></textarea></label>
-    <button class="btn solid" type="submit" data-i="f5">Pošalji na WhatsApp</button>
+    <label><span data-i="f4">Poruka</span><textarea id="fm" required></textarea></label>
+    <input type="text" id="fh" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+    <button class="btn solid" type="submit" data-i="f5">Pošalji upit</button>
     <p class="fmsg" id="fmsg" aria-live="polite"></p>
   </form>
 </div></section>
