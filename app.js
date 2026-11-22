@@ -20,7 +20,7 @@ const BOJE = ['narandzasta','krem','bijela','crna','sable','cokoladna','ostalo']
 const KAT = ['stenci','odrasli','grooming','ostalo'];
 
 const T = {
-bs:{n1:"Darija",n2:"Usluge",n3:"Štenci",n4:"Galerija",n5:"Pitanja",n6:"Kontakt",
+bs:{n1:"Početna",n2:"Usluge",n3:"Štenci",n4:"Galerija",n5:"Pitanja",n6:"Kontakt",
 h1:"Pomeranci odgajani <em>s ljubavlju</em>, u porodici",hp:"Više od 15 godina Darija Paspalj uzgaja, njeguje i školuje pomerance. Naši psi danas žive u više od 100 zemalja svijeta.",
 b1:"Najnovija legla",b2:"Grooming i usluge",hs:"uzgajivač, groomer i edukator",s1:"godina iskustva",s2:"zemalja svijeta",s3:"dokumenti za štence",s4:"pratilaca na Instagramu",
 ak:"Upoznajte uzgajivača",ah:"Pomeranci su dio <em>naše porodice</em>",ap:"Iza imena Pomeranian Toys stoji Darija Paspalj. Svako štene odrasta u našem domu, okruženo pažnjom, pa u novu porodicu stiže mirno, socijalizovano i naviknuto na ljude.",
@@ -52,7 +52,7 @@ c1:"Telefon",wab:"WhatsApp poruka ili poziv",callb:"Pozovite",waf:"Pišite nam",
 ft:'Podržavamo <a href="https://humanostspaja.ba" target="_blank" rel="noopener">Udruženje Humanost spaja</a>',
 opt0:"Štene pomeranca",opt9:"Nešto drugo",
 err:"Upišite ime da bismo znali kome odgovaramo.",ok:"Otvaramo WhatsApp sa vašom porukom…",hi:"Zdravo, ja sam",from:"iz",int:"Zanima me",pupmsg:n=>`Zdravo, zanima me štene ${n}. Da li je još dostupno?`},
-en:{n1:"Darija",n2:"Services",n3:"Puppies",n4:"Gallery",n5:"FAQ",n6:"Contact",
+en:{n1:"Home",n2:"Services",n3:"Puppies",n4:"Gallery",n5:"FAQ",n6:"Contact",
 h1:"Pomeranians raised <em>with love</em>, in a family",hp:"For more than 15 years Darija Paspalj has bred, groomed and taught about Pomeranians. Our dogs now live in more than 100 countries.",
 b1:"Latest litters",b2:"Grooming & services",hs:"breeder, groomer and educator",s1:"years of experience",s2:"countries worldwide",s3:"papers for puppies",s4:"followers on Instagram",
 ak:"Meet the breeder",ah:"Pomeranians are part of <em>our family</em>",ap:"Behind Pomeranian Toys is Darija Paspalj. Every puppy grows up in our home, surrounded by attention, so it arrives at its new family calm, socialised and used to people.",
